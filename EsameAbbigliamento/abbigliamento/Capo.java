@@ -1,6 +1,6 @@
 package abbigliamento;
 
-public class Capo implements WithName{
+public class Capo implements WithName {
 	private String nome;
 	private Modello modello;
 	private Materiale materiale;
@@ -13,6 +13,10 @@ public class Capo implements WithName{
 		this.colore = colore;
 	}
 
+	public Capo(Modello modello, Materiale materiale, Colore colore) {
+		this("", modello, materiale, colore);
+	}
+
 	/*
 	 * Il metodo prezzo() permette di calcolare il prezzo di un singolo capo:
 	 * 
@@ -20,7 +24,7 @@ public class Capo implements WithName{
 	 * prezzo = costoFisso + quantit‡Materiale * costoMateriale
 	 */
 	public double prezzo() {
-		return materiale.getCosto() + modello.getQuantita()
+		return modello.getCosto() + modello.getQuantita()
 				* materiale.getCosto();
 	}
 

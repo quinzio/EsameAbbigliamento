@@ -22,18 +22,18 @@ public class Collezione {
 
 	@SuppressWarnings("rawtypes")
 	public Collection trova(Materiale materiale) {
-		Collection byColor = collAbb.stream()
-				.filter(c -> c.getColore().equals(materiale))
+		Collection byMaterial = collAbb.stream()
+				.filter(c -> c.getMateriale().equals(materiale))
 				.collect(Collectors.toList());
-		return byColor;
+		return byMaterial;
 	}
 
 	@SuppressWarnings("rawtypes")
 	public Collection trova(Modello modello) {
-		Collection byColor = collAbb.stream()
-				.filter(c -> c.getColore().equals(modello))
+		Collection byModel = collAbb.stream()
+				.filter(c -> c.getModello().equals(modello))
 				.collect(Collectors.toList());
-		return byColor;
+		return byModel;
 	}
 
 }
