@@ -98,6 +98,9 @@ public class Abbigliamento {
 		return ltom(lcapi, name);
 	}
 
+	/*
+	 * Non viene impementato
+	 * */
 	public Collezione getCollezione(String name) {
 		return null;
 	}
